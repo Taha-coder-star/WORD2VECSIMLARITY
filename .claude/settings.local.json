@@ -5,7 +5,12 @@
       "Bash(claude mcp *)",
       "mcp__playwright__browser_navigate",
       "mcp__playwright__browser_snapshot",
-      "Bash(New-Item *)"
+      "Bash(New-Item *)",
+      "PowerShell(pip install *)",
+      "PowerShell(conda *)",
+      "PowerShell(winget install *)",
+      "PowerShell(py *)",
+      "Bash(Get-ChildItem *)"
     ]
   }
 }

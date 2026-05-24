@@ -1,0 +1,7 @@
+Parameter,Value,Rationale
+Model type,Skip-gram (sg=1),Skip-gram predicts context from target — better for rare/domain terms in 10-K filings
+Vector dimensions,100,100 dims balances expressiveness and overfitting on a 5-doc corpus
+Window size,5,Window=5 captures phrase-level context typical in financial sentences
+Min word frequency,5,min_count=5 removes hapax legomena that add noise in formal filings
+Training epochs,10,"10 epochs sufficient for convergence on a small, dense financial vocabulary"
+Seed,42,Fixed seed ensures reproducibility across runs
