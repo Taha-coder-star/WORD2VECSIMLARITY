@@ -1,0 +1,6 @@
+Metric,Value
+Vocab before preprocessing,9457
+Vocab after preprocessing,3682
+Terms removed,5775
+DTM documents,5
+DTM unique terms,3682
