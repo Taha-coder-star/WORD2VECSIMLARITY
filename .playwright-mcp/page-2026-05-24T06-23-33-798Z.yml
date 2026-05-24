@@ -1,0 +1,262 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - list [ref=e4]:
+        - listitem [ref=e5]:
+          - link [ref=e6] [cursor=pointer]:
+            - /url: https://www.sec.gov
+        - listitem [ref=e7]:
+          - link "SEC.gov" [ref=e8] [cursor=pointer]:
+            - /url: https://www.sec.gov
+        - listitem [ref=e9]:
+          - link "EDGAR" [ref=e10] [cursor=pointer]:
+            - /url: //www.sec.gov/submit-filings/about-edgar
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "Latest Filings" [ref=e13] [cursor=pointer]:
+            - /url: /cgi-bin/browse-edgar?action=getcurrent
+        - listitem [ref=e14]:
+          - link "Filings search tools" [ref=e15] [cursor=pointer]:
+            - /url: https://www.sec.gov/edgar/search-and-access
+    - heading "Filing Detail" [level=1] [ref=e17]
+  - list [ref=e19]:
+    - listitem [ref=e20]:
+      - link "SEC Home" [ref=e21] [cursor=pointer]:
+        - /url: /index.htm
+      - text: »
+    - listitem [ref=e22]:
+      - link "Company Search" [ref=e23] [cursor=pointer]:
+        - /url: /edgar/searchedgar/companysearch.html
+      - text: »
+    - listitem [ref=e24]: Current Page
+  - generic [ref=e25]:
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - strong [ref=e29]: Form 10-K
+          - text: "- Annual report [Section 13 and 15(d), not S-K Item 405]:"
+        - generic [ref=e30]:
+          - strong [ref=e31]: SEC Accession No.
+          - text: 0000858877-25-000111
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: Filing Date
+          - generic [ref=e35]: 2025-09-03
+          - generic [ref=e36]: Accepted
+          - generic [ref=e37]: 2025-09-03 16:52:59
+          - generic [ref=e38]: Documents
+          - generic [ref=e39]: "164"
+        - generic [ref=e40]:
+          - generic [ref=e41]: Period of Report
+          - generic [ref=e42]: 2025-07-26
+        - link "Interactive Data" [ref=e44] [cursor=pointer]:
+          - /url: /cgi-bin/viewer?action=view&cik=858877&accession_number=0000858877-25-000111&xbrl_type=v
+          - button "Interactive Data" [ref=e45]
+    - generic [ref=e47]:
+      - paragraph [ref=e48]: Document Format Files
+      - table "Document Format Files" [ref=e49]:
+        - rowgroup [ref=e50]:
+          - row "Seq Description Document Type Size" [ref=e51]:
+            - columnheader "Seq" [ref=e52]
+            - columnheader "Description" [ref=e53]
+            - columnheader "Document" [ref=e54]
+            - columnheader "Type" [ref=e55]
+            - columnheader "Size" [ref=e56]
+          - row "1 10-K csco-20250726.htm iXBRL 10-K 3528800" [ref=e57]:
+            - cell "1" [ref=e58]
+            - cell "10-K" [ref=e59]
+            - cell "csco-20250726.htm iXBRL" [ref=e60]:
+              - link "csco-20250726.htm" [ref=e61] [cursor=pointer]:
+                - /url: /ix?doc=/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm
+              - text: iXBRL
+            - cell "10-K" [ref=e62]
+            - cell "3528800" [ref=e63]
+          - row "2 SUBSIDIARIES OF THE REGISTRANT exh211subsidiariesofthereg.htm EX-21.1 158252" [ref=e64]:
+            - cell "2" [ref=e65]
+            - cell "SUBSIDIARIES OF THE REGISTRANT" [ref=e66]
+            - cell "exh211subsidiariesofthereg.htm" [ref=e67]:
+              - link "exh211subsidiariesofthereg.htm" [ref=e68] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/exh211subsidiariesofthereg.htm
+            - cell "EX-21.1" [ref=e69]
+            - cell "158252" [ref=e70]
+          - row "3 EXHIBIT 23.1- CONSENT OF INDEPENDENT REGISTERED PUBLIC ACCOUNTING FIRM exh231consentofindependent.htm EX-23.1 2747" [ref=e71]:
+            - cell "3" [ref=e72]
+            - cell "EXHIBIT 23.1- CONSENT OF INDEPENDENT REGISTERED PUBLIC ACCOUNTING FIRM" [ref=e73]
+            - cell "exh231consentofindependent.htm" [ref=e74]:
+              - link "exh231consentofindependent.htm" [ref=e75] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/exh231consentofindependent.htm
+            - cell "EX-23.1" [ref=e76]
+            - cell "2747" [ref=e77]
+          - row "4 EX-31.1 RULE 13A-14(A)/15D-14(A) CERTIFICATION OF PRINCIPAL EXECUTIVE OFFICER exh311rule13a-14a15dx14ace.htm EX-31.1 10337" [ref=e78]:
+            - cell "4" [ref=e79]
+            - cell "EX-31.1 RULE 13A-14(A)/15D-14(A) CERTIFICATION OF PRINCIPAL EXECUTIVE OFFICER" [ref=e80]
+            - cell "exh311rule13a-14a15dx14ace.htm" [ref=e81]:
+              - link "exh311rule13a-14a15dx14ace.htm" [ref=e82] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/exh311rule13a-14a15dx14ace.htm
+            - cell "EX-31.1" [ref=e83]
+            - cell "10337" [ref=e84]
+          - row "5 EX-31.2 RULE 13A-14(A)/15D-14(A) CERTIFICATION OF PRINCIPAL FINANCIAL OFFICER exh312rule13a-14a15dx14ace.htm EX-31.2 9871" [ref=e85]:
+            - cell "5" [ref=e86]
+            - cell "EX-31.2 RULE 13A-14(A)/15D-14(A) CERTIFICATION OF PRINCIPAL FINANCIAL OFFICER" [ref=e87]
+            - cell "exh312rule13a-14a15dx14ace.htm" [ref=e88]:
+              - link "exh312rule13a-14a15dx14ace.htm" [ref=e89] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/exh312rule13a-14a15dx14ace.htm
+            - cell "EX-31.2" [ref=e90]
+            - cell "9871" [ref=e91]
+          - row "6 EX-32.1 SECTION 1350 CERTIFICATION OF PRINCIPAL EXECUTIVE OFFICER exh321section1350certifica.htm EX-32.1 5182" [ref=e92]:
+            - cell "6" [ref=e93]
+            - cell "EX-32.1 SECTION 1350 CERTIFICATION OF PRINCIPAL EXECUTIVE OFFICER" [ref=e94]
+            - cell "exh321section1350certifica.htm" [ref=e95]:
+              - link "exh321section1350certifica.htm" [ref=e96] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/exh321section1350certifica.htm
+            - cell "EX-32.1" [ref=e97]
+            - cell "5182" [ref=e98]
+          - row "7 EX-32.2 SECTION 1350 CERTIFICATION OF PRINCIPAL FINANCIAL OFFICER exh322section1350certifica.htm EX-32.2 4862" [ref=e99]:
+            - cell "7" [ref=e100]
+            - cell "EX-32.2 SECTION 1350 CERTIFICATION OF PRINCIPAL FINANCIAL OFFICER" [ref=e101]
+            - cell "exh322section1350certifica.htm" [ref=e102]:
+              - link "exh322section1350certifica.htm" [ref=e103] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/exh322section1350certifica.htm
+            - cell "EX-32.2" [ref=e104]
+            - cell "4862" [ref=e105]
+          - row "13 CISCO LOGO csco-20250726_g1.jpg GRAPHIC 42058" [ref=e106]:
+            - cell "13" [ref=e107]
+            - cell "CISCO LOGO" [ref=e108]
+            - cell "csco-20250726_g1.jpg" [ref=e109]:
+              - link "csco-20250726_g1.jpg" [ref=e110] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/csco-20250726_g1.jpg
+            - cell "GRAPHIC" [ref=e111]
+            - cell "42058" [ref=e112]
+          - row "14 EMPLOYEES BY GEO csco-20250726_g2.jpg GRAPHIC 17940" [ref=e113]:
+            - cell "14" [ref=e114]
+            - cell "EMPLOYEES BY GEO" [ref=e115]
+            - cell "csco-20250726_g2.jpg" [ref=e116]:
+              - link "csco-20250726_g2.jpg" [ref=e117] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/csco-20250726_g2.jpg
+            - cell "GRAPHIC" [ref=e118]
+            - cell "17940" [ref=e119]
+          - row "15 EMPLOYEES BY FUNCTION csco-20250726_g3.jpg GRAPHIC 36019" [ref=e120]:
+            - cell "15" [ref=e121]
+            - cell "EMPLOYEES BY FUNCTION" [ref=e122]
+            - cell "csco-20250726_g3.jpg" [ref=e123]:
+              - link "csco-20250726_g3.jpg" [ref=e124] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/csco-20250726_g3.jpg
+            - cell "GRAPHIC" [ref=e125]
+            - cell "36019" [ref=e126]
+          - row "16 5-YEAR PERFORMANCE GRAPH csco-20250726_g4.jpg GRAPHIC 72391" [ref=e127]:
+            - cell "16" [ref=e128]
+            - cell "5-YEAR PERFORMANCE GRAPH" [ref=e129]
+            - cell "csco-20250726_g4.jpg" [ref=e130]:
+              - link "csco-20250726_g4.jpg" [ref=e131] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/csco-20250726_g4.jpg
+            - cell "GRAPHIC" [ref=e132]
+            - cell "72391" [ref=e133]
+          - row "Complete submission text file 0000858877-25-000111.txt 20159893" [ref=e134]:
+            - cell [ref=e135]
+            - cell "Complete submission text file" [ref=e136]
+            - cell "0000858877-25-000111.txt" [ref=e137]:
+              - link "0000858877-25-000111.txt" [ref=e138] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/0000858877-25-000111.txt
+            - cell [ref=e139]
+            - cell "20159893" [ref=e140]
+    - generic [ref=e142]:
+      - paragraph [ref=e143]: Data Files
+      - table "Data Files" [ref=e144]:
+        - rowgroup [ref=e145]:
+          - row "Seq Description Document Type Size" [ref=e146]:
+            - columnheader "Seq" [ref=e147]
+            - columnheader "Description" [ref=e148]
+            - columnheader "Document" [ref=e149]
+            - columnheader "Type" [ref=e150]
+            - columnheader "Size" [ref=e151]
+          - row "8 XBRL TAXONOMY EXTENSION SCHEMA DOCUMENT csco-20250726.xsd EX-101.SCH 102873" [ref=e152]:
+            - cell "8" [ref=e153]
+            - cell "XBRL TAXONOMY EXTENSION SCHEMA DOCUMENT" [ref=e154]
+            - cell "csco-20250726.xsd" [ref=e155]:
+              - link "csco-20250726.xsd" [ref=e156] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/csco-20250726.xsd
+            - cell "EX-101.SCH" [ref=e157]
+            - cell "102873" [ref=e158]
+          - row "9 XBRL TAXONOMY EXTENSION CALCULATION LINKBASE DOCUMENT csco-20250726_cal.xml EX-101.CAL 196075" [ref=e159]:
+            - cell "9" [ref=e160]
+            - cell "XBRL TAXONOMY EXTENSION CALCULATION LINKBASE DOCUMENT" [ref=e161]
+            - cell "csco-20250726_cal.xml" [ref=e162]:
+              - link "csco-20250726_cal.xml" [ref=e163] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/csco-20250726_cal.xml
+            - cell "EX-101.CAL" [ref=e164]
+            - cell "196075" [ref=e165]
+          - row "10 XBRL TAXONOMY EXTENSION DEFINITION LINKBASE DOCUMENT csco-20250726_def.xml EX-101.DEF 569042" [ref=e166]:
+            - cell "10" [ref=e167]
+            - cell "XBRL TAXONOMY EXTENSION DEFINITION LINKBASE DOCUMENT" [ref=e168]
+            - cell "csco-20250726_def.xml" [ref=e169]:
+              - link "csco-20250726_def.xml" [ref=e170] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/csco-20250726_def.xml
+            - cell "EX-101.DEF" [ref=e171]
+            - cell "569042" [ref=e172]
+          - row "11 XBRL TAXONOMY EXTENSION LABEL LINKBASE DOCUMENT csco-20250726_lab.xml EX-101.LAB 1308539" [ref=e173]:
+            - cell "11" [ref=e174]
+            - cell "XBRL TAXONOMY EXTENSION LABEL LINKBASE DOCUMENT" [ref=e175]
+            - cell "csco-20250726_lab.xml" [ref=e176]:
+              - link "csco-20250726_lab.xml" [ref=e177] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/csco-20250726_lab.xml
+            - cell "EX-101.LAB" [ref=e178]
+            - cell "1308539" [ref=e179]
+          - row "12 XBRL TAXONOMY EXTENSION PRESENTATION LINKBASE DOCUMENT csco-20250726_pre.xml EX-101.PRE 975967" [ref=e180]:
+            - cell "12" [ref=e181]
+            - cell "XBRL TAXONOMY EXTENSION PRESENTATION LINKBASE DOCUMENT" [ref=e182]
+            - cell "csco-20250726_pre.xml" [ref=e183]:
+              - link "csco-20250726_pre.xml" [ref=e184] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/csco-20250726_pre.xml
+            - cell "EX-101.PRE" [ref=e185]
+            - cell "975967" [ref=e186]
+          - row "167 EXTRACTED XBRL INSTANCE DOCUMENT csco-20250726_htm.xml XML 3962209" [ref=e187]:
+            - cell "167" [ref=e188]
+            - cell "EXTRACTED XBRL INSTANCE DOCUMENT" [ref=e189]
+            - cell "csco-20250726_htm.xml" [ref=e190]:
+              - link "csco-20250726_htm.xml" [ref=e191] [cursor=pointer]:
+                - /url: /Archives/edgar/data/858877/000085887725000111/csco-20250726_htm.xml
+            - cell "XML" [ref=e192]
+            - cell "3962209" [ref=e193]
+    - generic [ref=e194]:
+      - generic [ref=e195]:
+        - text: Mailing Address
+        - generic [ref=e196]: 170 WEST TASMAN DR
+        - generic [ref=e197]:
+          - text: SAN JOSE
+          - generic [ref=e198]: CA
+          - text: 95134-1706
+      - generic [ref=e199]:
+        - text: Business Address
+        - generic [ref=e200]: 170 WEST TASMAN DR
+        - generic [ref=e201]:
+          - text: SAN JOSE
+          - generic [ref=e202]: CA
+          - text: 95134-1706
+        - generic [ref=e203]: "4085264000"
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - text: "CISCO SYSTEMS, INC. (Filer) CIK:"
+          - link "0000858877 (see all company filings)" [ref=e206] [cursor=pointer]:
+            - /url: /cgi-bin/browse-edgar?CIK=0000858877&action=getcompany
+        - paragraph [ref=e207]:
+          - text: "EIN.:"
+          - strong [ref=e208]: "770059951"
+          - text: "| State of Incorp.:"
+          - strong [ref=e209]: DE
+          - text: "| Fiscal Year End:"
+          - strong [ref=e210]: "0725"
+          - text: "Type:"
+          - strong [ref=e211]: 10-K
+          - text: "| Act:"
+          - strong [ref=e212]: "34"
+          - text: "| File No.:"
+          - link "001-39940" [ref=e213] [cursor=pointer]:
+            - /url: /cgi-bin/browse-edgar?filenum=001-39940&action=getcompany
+            - strong [ref=e214]: 001-39940
+          - text: "| Film No.:"
+          - strong [ref=e215]: "251290611"
+          - text: "SIC:"
+          - link "3576" [ref=e217] [cursor=pointer]:
+            - /url: /cgi-bin/browse-edgar?action=getcompany&SIC=3576&owner=include
+          - text: Computer Communications Equipment
+          - text: "(CF Office: 06 Technology)"

@@ -1,0 +1,298 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - list [ref=e4]:
+        - listitem [ref=e5]:
+          - link [ref=e6] [cursor=pointer]:
+            - /url: https://www.sec.gov
+        - listitem [ref=e7]:
+          - link "SEC.gov" [ref=e8] [cursor=pointer]:
+            - /url: https://www.sec.gov
+        - listitem [ref=e9]:
+          - link "EDGAR" [ref=e10] [cursor=pointer]:
+            - /url: //www.sec.gov/submit-filings/about-edgar
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "Latest Filings" [ref=e13] [cursor=pointer]:
+            - /url: /cgi-bin/browse-edgar?action=getcurrent
+        - listitem [ref=e14]:
+          - link "Filings search tools" [ref=e15] [cursor=pointer]:
+            - /url: https://www.sec.gov/edgar/search-and-access
+    - heading "EDGAR Company Search Results" [level=1] [ref=e16]
+  - list [ref=e18]:
+    - listitem [ref=e19]:
+      - link "SEC Home" [ref=e20] [cursor=pointer]:
+        - /url: /index.htm
+      - text: »
+    - listitem [ref=e21]:
+      - link "Company Search" [ref=e22] [cursor=pointer]:
+        - /url: /edgar/searchedgar/companysearch.html
+      - text: »
+    - listitem [ref=e23]: Current Page
+  - generic [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - text: Mailing Address
+        - generic [ref=e27]: 170 WEST TASMAN DR
+        - generic [ref=e28]: SAN JOSE CA 95134-1706
+      - generic [ref=e29]:
+        - text: Business Address
+        - generic [ref=e30]: 170 WEST TASMAN DR
+        - generic [ref=e31]: SAN JOSE CA 95134-1706
+        - generic [ref=e32]: "4085264000"
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - text: "CISCO SYSTEMS, INC. CIK#:"
+          - link "0000858877 (see all company filings)" [ref=e35] [cursor=pointer]:
+            - /url: /cgi-bin/browse-edgar?action=getcompany&CIK=0000858877&owner=include&count=10
+        - paragraph [ref=e36]:
+          - text: "SIC:"
+          - link "3576" [ref=e37] [cursor=pointer]:
+            - /url: /cgi-bin/browse-edgar?action=getcompany&SIC=3576&owner=include&count=10
+          - text: "- COMPUTER COMMUNICATIONS EQUIPMENT"
+          - text: "State location:"
+          - link "CA" [ref=e38] [cursor=pointer]:
+            - /url: /cgi-bin/browse-edgar?action=getcompany&State=CA&owner=include&count=10
+          - text: "| State of Inc.:"
+          - strong [ref=e39]: DE
+          - text: "| Fiscal Year End: 0725"
+          - text: "formerly: CISCO SYSTEMS INC (filings through 2011-11-22)"
+          - text: "formerly: CISCO SYSTEMS, INC. (filings through 2026-05-22)"
+          - generic [ref=e40]:
+            - text: "(CF Office: 06 Technology)"
+            - generic [ref=e41]:
+              - text: Get
+              - link "insider transactions" [ref=e42] [cursor=pointer]:
+                - /url: /cgi-bin/own-disp?action=getissuer&CIK=0000858877
+              - text: for this issuer.
+              - text: Get
+              - link "insider transactions" [ref=e43] [cursor=pointer]:
+                - /url: /cgi-bin/own-disp?action=getowner&CIK=0000858877
+              - text: for this reporting owner.
+    - table [ref=e46]:
+      - rowgroup [ref=e47]:
+        - row
+        - row "Filter Results Search Within Files" [ref=e48]:
+          - cell "Filter Results" [ref=e49]:
+            - strong [ref=e50]: Filter Results
+          - cell [ref=e51]
+          - cell "Search Within Files" [ref=e53]:
+            - strong [ref=e54]: Search Within Files
+            - img [ref=e55]
+        - 'row "Filing Type: 10-K Prior to: (YYYYMMDD) Ownership? include exclude only Limit Results Per Page 10 Entries Search Show All Enter keywords Search" [ref=e56]':
+          - 'cell "Filing Type: 10-K" [ref=e57]':
+            - generic [ref=e58]: "Filing Type:"
+            - textbox "Filing Type:" [ref=e59]: 10-K
+          - 'cell "Prior to: (YYYYMMDD)" [ref=e60]':
+            - generic [ref=e61]: "Prior to:"
+            - text: (YYYYMMDD)
+            - textbox "Prior to:" [ref=e62]
+          - cell "Ownership? include exclude only" [ref=e63]:
+            - text: Ownership?
+            - radio "include" [checked] [ref=e64]
+            - generic [ref=e65]: include
+            - radio "exclude" [ref=e66]
+            - generic [ref=e67]: exclude
+            - radio "only" [ref=e68]
+            - generic [ref=e69]: only
+          - cell "Limit Results Per Page 10 Entries" [ref=e70]:
+            - generic [ref=e71]: Limit Results Per Page
+            - combobox "Limit Results Per Page" [ref=e72]:
+              - option "10 Entries" [selected]
+              - option "20 Entries"
+              - option "40 Entries"
+              - option "80 Entries"
+              - option "100 Entries"
+          - cell "Search Show All" [ref=e73]:
+            - button "Search" [ref=e74] [cursor=pointer]
+            - button "Show All" [ref=e75] [cursor=pointer]
+          - cell "Enter keywords Search" [ref=e76]:
+            - text: Enter keywords
+            - textbox [ref=e77]
+            - button "Search" [ref=e78] [cursor=pointer]
+    - table [ref=e81]:
+      - rowgroup [ref=e82]:
+        - row "Items 1 - 10 0000858877 Filings RSS Feed Next10" [ref=e83]:
+          - cell "Items 1 - 10 0000858877 Filings RSS Feed" [ref=e84]:
+            - text: Items 1 - 10
+            - link "0000858877 Filings RSS Feed" [ref=e85] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&CIK=0000858877&type=10-K%25&dateb=&owner=include&start=0&count=10&output=atom
+              - img "0000858877 Filings" [ref=e86]
+              - text: RSS Feed
+          - cell "Next10" [ref=e87]:
+            - button "Next10" [ref=e88] [cursor=pointer]
+    - table "Results" [ref=e90]:
+      - rowgroup [ref=e91]:
+        - row "Filings Format Description Filing Date File/Film Number" [ref=e92]:
+          - columnheader "Filings" [ref=e93]
+          - columnheader "Format" [ref=e94]
+          - columnheader "Description" [ref=e95]
+          - columnheader "Filing Date" [ref=e96]
+          - columnheader "File/Film Number" [ref=e97]
+        - 'row "10-K Documents Interactive Data Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-25-000111 (34 Act) Size: 20 MB 2025-09-03 001-39940 251290611" [ref=e98]':
+          - cell "10-K" [ref=e99]
+          - cell "Documents Interactive Data" [ref=e100]:
+            - link "Documents" [ref=e101] [cursor=pointer]:
+              - /url: /Archives/edgar/data/858877/000085887725000111/0000858877-25-000111-index.htm
+            - link "Interactive Data" [ref=e102] [cursor=pointer]:
+              - /url: /cgi-bin/viewer?action=view&amp;cik=858877&amp;accession_number=0000858877-25-000111&amp;xbrl_type=v
+          - 'cell "Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-25-000111 (34 Act) Size: 20 MB" [ref=e103]':
+            - text: Annual report [Section 13 and 15(d), not S-K Item 405]
+            - text: "Acc-no: 0000858877-25-000111 (34 Act) Size: 20 MB"
+          - cell "2025-09-03" [ref=e104]
+          - cell "001-39940 251290611" [ref=e105]:
+            - link "001-39940" [ref=e106] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&filenum=001-39940&owner=include&count=10
+            - text: "251290611"
+        - 'row "10-K Documents Interactive Data Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-24-000017 (34 Act) Size: 21 MB 2024-09-05 001-39940 241281905" [ref=e107]':
+          - cell "10-K" [ref=e108]
+          - cell "Documents Interactive Data" [ref=e109]:
+            - link "Documents" [ref=e110] [cursor=pointer]:
+              - /url: /Archives/edgar/data/858877/000085887724000017/0000858877-24-000017-index.htm
+            - link "Interactive Data" [ref=e111] [cursor=pointer]:
+              - /url: /cgi-bin/viewer?action=view&amp;cik=858877&amp;accession_number=0000858877-24-000017&amp;xbrl_type=v
+          - 'cell "Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-24-000017 (34 Act) Size: 21 MB" [ref=e112]':
+            - text: Annual report [Section 13 and 15(d), not S-K Item 405]
+            - text: "Acc-no: 0000858877-24-000017 (34 Act) Size: 21 MB"
+          - cell "2024-09-05" [ref=e113]
+          - cell "001-39940 241281905" [ref=e114]:
+            - link "001-39940" [ref=e115] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&filenum=001-39940&owner=include&count=10
+            - text: "241281905"
+        - 'row "10-K Documents Interactive Data Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-23-000023 (34 Act) Size: 20 MB 2023-09-07 001-39940 231242626" [ref=e116]':
+          - cell "10-K" [ref=e117]
+          - cell "Documents Interactive Data" [ref=e118]:
+            - link "Documents" [ref=e119] [cursor=pointer]:
+              - /url: /Archives/edgar/data/858877/000085887723000023/0000858877-23-000023-index.htm
+            - link "Interactive Data" [ref=e120] [cursor=pointer]:
+              - /url: /cgi-bin/viewer?action=view&amp;cik=858877&amp;accession_number=0000858877-23-000023&amp;xbrl_type=v
+          - 'cell "Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-23-000023 (34 Act) Size: 20 MB" [ref=e121]':
+            - text: Annual report [Section 13 and 15(d), not S-K Item 405]
+            - text: "Acc-no: 0000858877-23-000023 (34 Act) Size: 20 MB"
+          - cell "2023-09-07" [ref=e122]
+          - cell "001-39940 231242626" [ref=e123]:
+            - link "001-39940" [ref=e124] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&filenum=001-39940&owner=include&count=10
+            - text: "231242626"
+        - 'row "10-K Documents Interactive Data Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-22-000013 (34 Act) Size: 21 MB 2022-09-08 001-39940 221234284" [ref=e125]':
+          - cell "10-K" [ref=e126]
+          - cell "Documents Interactive Data" [ref=e127]:
+            - link "Documents" [ref=e128] [cursor=pointer]:
+              - /url: /Archives/edgar/data/858877/000085887722000013/0000858877-22-000013-index.htm
+            - link "Interactive Data" [ref=e129] [cursor=pointer]:
+              - /url: /cgi-bin/viewer?action=view&amp;cik=858877&amp;accession_number=0000858877-22-000013&amp;xbrl_type=v
+          - 'cell "Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-22-000013 (34 Act) Size: 21 MB" [ref=e130]':
+            - text: Annual report [Section 13 and 15(d), not S-K Item 405]
+            - text: "Acc-no: 0000858877-22-000013 (34 Act) Size: 21 MB"
+          - cell "2022-09-08" [ref=e131]
+          - cell "001-39940 221234284" [ref=e132]:
+            - link "001-39940" [ref=e133] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&filenum=001-39940&owner=include&count=10
+            - text: "221234284"
+        - 'row "10-K Documents Interactive Data Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-21-000013 (34 Act) Size: 21 MB 2021-09-09 001-39940 211244864" [ref=e134]':
+          - cell "10-K" [ref=e135]
+          - cell "Documents Interactive Data" [ref=e136]:
+            - link "Documents" [ref=e137] [cursor=pointer]:
+              - /url: /Archives/edgar/data/858877/000085887721000013/0000858877-21-000013-index.htm
+            - link "Interactive Data" [ref=e138] [cursor=pointer]:
+              - /url: /cgi-bin/viewer?action=view&amp;cik=858877&amp;accession_number=0000858877-21-000013&amp;xbrl_type=v
+          - 'cell "Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-21-000013 (34 Act) Size: 21 MB" [ref=e139]':
+            - text: Annual report [Section 13 and 15(d), not S-K Item 405]
+            - text: "Acc-no: 0000858877-21-000013 (34 Act) Size: 21 MB"
+          - cell "2021-09-09" [ref=e140]
+          - cell "001-39940 211244864" [ref=e141]:
+            - link "001-39940" [ref=e142] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&filenum=001-39940&owner=include&count=10
+            - text: "211244864"
+        - 'row "10-K Documents Interactive Data Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-20-000010 (34 Act) Size: 26 MB 2020-09-03 000-18225 201159886" [ref=e143]':
+          - cell "10-K" [ref=e144]
+          - cell "Documents Interactive Data" [ref=e145]:
+            - link "Documents" [ref=e146] [cursor=pointer]:
+              - /url: /Archives/edgar/data/858877/000085887720000010/0000858877-20-000010-index.htm
+            - link "Interactive Data" [ref=e147] [cursor=pointer]:
+              - /url: /cgi-bin/viewer?action=view&amp;cik=858877&amp;accession_number=0000858877-20-000010&amp;xbrl_type=v
+          - 'cell "Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-20-000010 (34 Act) Size: 26 MB" [ref=e148]':
+            - text: Annual report [Section 13 and 15(d), not S-K Item 405]
+            - text: "Acc-no: 0000858877-20-000010 (34 Act) Size: 26 MB"
+          - cell "2020-09-03" [ref=e149]
+          - cell "000-18225 201159886" [ref=e150]:
+            - link "000-18225" [ref=e151] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&filenum=000-18225&owner=include&count=10
+            - text: "201159886"
+        - 'row "10-K Documents Interactive Data Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-19-000012 (34 Act) Size: 22 MB 2019-09-05 000-18225 191077957" [ref=e152]':
+          - cell "10-K" [ref=e153]
+          - cell "Documents Interactive Data" [ref=e154]:
+            - link "Documents" [ref=e155] [cursor=pointer]:
+              - /url: /Archives/edgar/data/858877/000085887719000012/0000858877-19-000012-index.htm
+            - link "Interactive Data" [ref=e156] [cursor=pointer]:
+              - /url: /cgi-bin/viewer?action=view&amp;cik=858877&amp;accession_number=0000858877-19-000012&amp;xbrl_type=v
+          - 'cell "Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-19-000012 (34 Act) Size: 22 MB" [ref=e157]':
+            - text: Annual report [Section 13 and 15(d), not S-K Item 405]
+            - text: "Acc-no: 0000858877-19-000012 (34 Act) Size: 22 MB"
+          - cell "2019-09-05" [ref=e158]
+          - cell "000-18225 191077957" [ref=e159]:
+            - link "000-18225" [ref=e160] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&filenum=000-18225&owner=include&count=10
+            - text: "191077957"
+        - 'row "10-K Documents Interactive Data Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-18-000011 (34 Act) Size: 24 MB 2018-09-06 000-18225 181058249" [ref=e161]':
+          - cell "10-K" [ref=e162]
+          - cell "Documents Interactive Data" [ref=e163]:
+            - link "Documents" [ref=e164] [cursor=pointer]:
+              - /url: /Archives/edgar/data/858877/000085887718000011/0000858877-18-000011-index.htm
+            - link "Interactive Data" [ref=e165] [cursor=pointer]:
+              - /url: /cgi-bin/viewer?action=view&amp;cik=858877&amp;accession_number=0000858877-18-000011&amp;xbrl_type=v
+          - 'cell "Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-18-000011 (34 Act) Size: 24 MB" [ref=e166]':
+            - text: Annual report [Section 13 and 15(d), not S-K Item 405]
+            - text: "Acc-no: 0000858877-18-000011 (34 Act) Size: 24 MB"
+          - cell "2018-09-06" [ref=e167]
+          - cell "000-18225 181058249" [ref=e168]:
+            - link "000-18225" [ref=e169] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&filenum=000-18225&owner=include&count=10
+            - text: "181058249"
+        - 'row "10-K Documents Interactive Data Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-17-000016 (34 Act) Size: 25 MB 2017-09-07 000-18225 171074500" [ref=e170]':
+          - cell "10-K" [ref=e171]
+          - cell "Documents Interactive Data" [ref=e172]:
+            - link "Documents" [ref=e173] [cursor=pointer]:
+              - /url: /Archives/edgar/data/858877/000085887717000016/0000858877-17-000016-index.htm
+            - link "Interactive Data" [ref=e174] [cursor=pointer]:
+              - /url: /cgi-bin/viewer?action=view&amp;cik=858877&amp;accession_number=0000858877-17-000016&amp;xbrl_type=v
+          - 'cell "Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-17-000016 (34 Act) Size: 25 MB" [ref=e175]':
+            - text: Annual report [Section 13 and 15(d), not S-K Item 405]
+            - text: "Acc-no: 0000858877-17-000016 (34 Act) Size: 25 MB"
+          - cell "2017-09-07" [ref=e176]
+          - cell "000-18225 171074500" [ref=e177]:
+            - link "000-18225" [ref=e178] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&filenum=000-18225&owner=include&count=10
+            - text: "171074500"
+        - 'row "10-K Documents Interactive Data Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-16-000117 (34 Act) Size: 24 MB 2016-09-08 000-18225 161877031" [ref=e179]':
+          - cell "10-K" [ref=e180]
+          - cell "Documents Interactive Data" [ref=e181]:
+            - link "Documents" [ref=e182] [cursor=pointer]:
+              - /url: /Archives/edgar/data/858877/000085887716000117/0000858877-16-000117-index.htm
+            - link "Interactive Data" [ref=e183] [cursor=pointer]:
+              - /url: /cgi-bin/viewer?action=view&amp;cik=858877&amp;accession_number=0000858877-16-000117&amp;xbrl_type=v
+          - 'cell "Annual report [Section 13 and 15(d), not S-K Item 405] Acc-no: 0000858877-16-000117 (34 Act) Size: 24 MB" [ref=e184]':
+            - text: Annual report [Section 13 and 15(d), not S-K Item 405]
+            - text: "Acc-no: 0000858877-16-000117 (34 Act) Size: 24 MB"
+          - cell "2016-09-08" [ref=e185]
+          - cell "000-18225 161877031" [ref=e186]:
+            - link "000-18225" [ref=e187] [cursor=pointer]:
+              - /url: /cgi-bin/browse-edgar?action=getcompany&filenum=000-18225&owner=include&count=10
+            - text: "161877031"
+    - table [ref=e190]:
+      - rowgroup [ref=e191]:
+        - row "Next10" [ref=e192]:
+          - cell "Next10" [ref=e193]:
+            - button "Next10" [ref=e194] [cursor=pointer]
+  - generic [ref=e195]:
+    - generic [ref=e196]: https://www.sec.gov/cgi-bin/browse-edgar
+    - generic [ref=e197]:
+      - link "Home" [ref=e198] [cursor=pointer]:
+        - /url: /index.htm
+      - text: "|"
+      - link "Search the Next-Generation EDGAR System" [ref=e199] [cursor=pointer]:
+        - /url: /edgar/searchedgar/webusers.htm
+      - text: "|"
+      - link "Previous Page" [ref=e200] [cursor=pointer]:
+        - /url: javascript:history.back()
+    - generic [ref=e201]: Modified 07/18/2014
