@@ -77,20 +77,21 @@ PART_PLACEHOLDERS = {
 }
 
 CONCLUSION = (
-    "As of the current stage of this report, the corpus construction and text "
-    "preprocessing for Cisco Systems, Inc.'s five-year 10-K filings have been completed. "
-    "The cleaned corpus consists of lemmatised tokens drawn from five annual reports "
-    "spanning fiscal years 2021 to 2025, with domain-irrelevant and generic stopwords "
-    "removed. The vocabulary was reduced from 9,457 raw terms to 3,682 unique lemmatised "
-    "terms. The top 30 most frequent terms confirm that the corpus is dominated by "
-    "meaningful financial and operational vocabulary, providing a reliable foundation for "
-    "the subsequent analytical stages."
+    "Questions 1 through 5 of this assignment have been completed. The corpus construction "
+    "and preprocessing pipeline (Q1) produced a cleaned vocabulary of 3,682 lemmatised "
+    "terms from Cisco Systems, Inc.'s five annual 10-K filings spanning fiscal years 2021 "
+    "to 2025. A Word2Vec skip-gram model (Q2) was trained on this corpus, yielding a "
+    "2,799-word vocabulary with 100-dimensional embeddings. Semantic proximity analysis "
+    "(Q3) identified nearest-neighbour terms for five financial dimensions — liquidity, "
+    "profitability, debt, revenue, and risk — using seed terms selected for coherent "
+    "financial neighbourhood structure. Thematic clustering (Q4) applied k-means to the "
+    "top 300 frequency words, producing five clusters labelled according to their "
+    "representative vocabulary. Co-occurrence network construction (Q5) built an undirected "
+    "weighted graph of 2,858 nodes and 56,753 edges from the full corpus, with network "
+    "statistics confirming a sparse, small-world structure with moderate clustering."
     "\n\n"
-    "Subsequent sections will extend this foundation using a Word2Vec skip-gram model "
-    "to capture semantic relationships between financial terms, k-means clustering to "
-    "identify thematic vocabulary groupings, and co-occurrence network analysis to reveal "
-    "structural patterns in Cisco's management language. These analyses will be completed "
-    "and reported in Parts 2 and 3 of this document."
+    "Question 6, covering centrality analysis and community detection on the co-occurrence "
+    "network, remains to be completed and will be added to Part 3 of this report."
 )
 
 # Section file prefixes that belong to each part
@@ -224,7 +225,7 @@ def _csv_table(path):
 
 # ── Image embed ───────────────────────────────────────────────────────────────
 
-def _image(path, max_w=14 * cm, max_h=9 * cm):
+def _image(path, max_w=15.5 * cm, max_h=13 * cm):
     if not os.path.exists(path):
         return None
     try:

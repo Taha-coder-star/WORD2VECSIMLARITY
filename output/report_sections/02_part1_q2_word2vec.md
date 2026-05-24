@@ -13,6 +13,20 @@ Each row is a dense vector representation of one term in the cleaned corpus.
 
 [TABLE](output/tables/q2_top5_l2norm.csv)
 
+Among the top 5 words by L2 norm, competitor and price are semantically meaningful
+business and market terms whose high vector magnitudes reflect that they appear in
+diverse and discriminative contexts across the five filings. Competitor is used
+consistently in competitive landscape and risk factor discussions, while price relates
+to product pricing, market share dynamics, and stock valuation language. The term factor
+also carries substantive meaning as it frequently co-occurs with the risk-factor
+disclosures required in 10-K Section 1A filings. In contrast, inc and filer are generic
+SEC administrative terms: inc appears as a suffix in formal legal company name
+references, while filer is an administrative designation used on SEC cover pages and in
+exhibit sections. Their high L2 norms indicate that these terms appear in sufficiently
+varied textual contexts to develop large vector magnitudes, but they represent artefacts
+of the 10-K filing format rather than meaningful financial vocabulary and do not
+materially affect the semantic structure of the model.
+
 ## Model Rationale and Interpretation
 
 The skip-gram architecture (sg=1) was selected over CBOW because skip-gram trains by

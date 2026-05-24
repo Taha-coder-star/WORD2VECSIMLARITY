@@ -4,7 +4,7 @@ Part 2 – Question 4: Thematic Clustering of Word Vectors (6 marks)
 Tasks:
   1. Filter word-vector matrix to top 300 words by corpus frequency.
   2. Normalize each vector to unit length.
-  3. K-means clustering (k=5, nstart=25 → n_init=25 in sklearn). Report WCSS.
+  3. K-means clustering (k=5, nstart=25 -> n_init=25 in sklearn). Report WCSS.
   4. Top 10 representative words per cluster (closest to centroid).
      Assign financial labels to each cluster.
   5. PCA 2D scatter plot coloured by cluster, labelled with centroid words.
@@ -28,17 +28,17 @@ MODELS_DIR = "output/models"
 PLOTS_DIR  = "output/plots"
 TABLES_DIR = "output/tables"
 
-SEED    = 42
-K       = 5
-TOP_N   = 300
+SEED  = 42
+K     = 5
+TOP_N = 300
 
 # Manually assigned financial labels per cluster (update after inspecting output)
 CLUSTER_LABELS = {
-    0: "Capital Structure & Financing",
-    1: "Operational Efficiency",
-    2: "Market & Revenue Growth",
-    3: "Liquidity & Working Capital",
-    4: "Risk & Uncertainty",
+    0: "Derivatives & Equity Instruments",
+    1: "Corporate Governance & Legal",
+    2: "Asset Valuation & Accounting",
+    3: "Revenue & Lease Accounting",
+    4: "Strategic & Operational Context",
 }
 
 COLORS = ["#2196F3", "#4CAF50", "#FF9800", "#9C27B0", "#F44336"]
@@ -46,16 +46,15 @@ COLORS = ["#2196F3", "#4CAF50", "#FF9800", "#9C27B0", "#F44336"]
 
 def run():
     # ── Load model and corpus frequency ──────────────────────────────────────
-    model     = Word2Vec.load(os.path.join(MODELS_DIR, "word2vec.model"))
-    wv        = model.wv
+    model    = Word2Vec.load(os.path.join(MODELS_DIR, "word2vec.model"))
+    wv       = model.wv
 
     raw_docs  = load_10k_files(DATA_DIR)
     all_tokens = [t for text in raw_docs.values() for t in preprocess(text)]
     freq       = Counter(all_tokens)
 
     # ── 1. Filter to top 300 words present in model vocab ────────────────────
-    top300_words = [w for w, _ in freq.most_common()
-                    if w in wv][:TOP_N]
+    top300_words = [w for w, _ in freq.most_common() if w in wv][:TOP_N]
     print(f"Using {len(top300_words)} words (top {TOP_N} by frequency in vocab)")
 
     vectors = np.array([wv[w] for w in top300_words])
@@ -65,7 +64,7 @@ def run():
 
     # ── 3. K-means clustering ─────────────────────────────────────────────────
     np.random.seed(SEED)
-    km = KMeans(n_clusters=K, n_init=25, random_state=SEED)
+    km     = KMeans(n_clusters=K, n_init=25, random_state=SEED)
     labels = km.fit_predict(vectors_norm)
     wcss   = km.inertia_
 
@@ -74,6 +73,7 @@ def run():
 
     # ── 4. Top 10 words per cluster (closest to centroid) ────────────────────
     cluster_rows = []
+    top3 = {}
     for c in range(K):
         mask      = labels == c
         c_vectors = vectors_norm[mask]
@@ -84,6 +84,8 @@ def run():
         top10_words = [c_words[i] for i in top10_idx]
 
         label = CLUSTER_LABELS.get(c, f"Cluster {c}")
+        top3[c] = top10_words[:3]
+
         print(f"\nCluster {c} — {label}")
         print("  Words:", ", ".join(top10_words))
 
@@ -91,10 +93,18 @@ def run():
             cluster_rows.append({"Cluster": c, "Label": label,
                                   "Rank": rank, "Word": w})
 
+    # ── Save tables ───────────────────────────────────────────────────────────
+    os.makedirs(TABLES_DIR, exist_ok=True)
+
     cluster_df = pd.DataFrame(cluster_rows)
-    cluster_df.to_csv(os.path.join(TABLES_DIR, "q4_cluster_words.csv"), index=False)
+    cluster_df.to_csv(os.path.join(TABLES_DIR, "q4_representative_words.csv"), index=False)
+
+    summary_df = pd.DataFrame([{"K": K, "WCSS": round(wcss, 4), "n_init": 25, "seed": SEED}])
+    summary_df.to_csv(os.path.join(TABLES_DIR, "q4_cluster_summary.csv"), index=False)
 
     # ── 5. PCA scatter plot ───────────────────────────────────────────────────
+    os.makedirs(PLOTS_DIR, exist_ok=True)
+
     pca    = PCA(n_components=2, random_state=SEED)
     coords = pca.fit_transform(vectors_norm)
 
@@ -116,7 +126,7 @@ def run():
                             fontsize=7, alpha=0.85)
                 labeled.add(idx)
 
-    ax.set_title("Word Vector Clusters (PCA 2D) – k=5", fontsize=14)
+    ax.set_title("Word Vector Clusters (PCA 2D) - k=5", fontsize=14)
     ax.set_xlabel(f"PC1 ({pca.explained_variance_ratio_[0]*100:.1f}% variance)")
     ax.set_ylabel(f"PC2 ({pca.explained_variance_ratio_[1]*100:.1f}% variance)")
     ax.legend(loc="best", fontsize=9)
@@ -125,29 +135,54 @@ def run():
     plt.show()
     print("\nPCA scatter plot saved.")
 
-    wcss_df = pd.DataFrame([{"WCSS": wcss, "K": K, "n_init": 25, "seed": SEED}])
-    wcss_df.to_csv(os.path.join(TABLES_DIR, "q4_wcss.csv"), index=False)
-
     # ── Report section ────────────────────────────────────────────────────────
+    interp_lines = []
+    for c in range(K):
+        label = CLUSTER_LABELS.get(c, f"Cluster {c}")
+        words = ", ".join(top3.get(c, []))
+        interp_lines.append(
+            f"The '{label}' cluster groups words such as {words}, "
+            f"reflecting semantic and contextual similarity in the Word2Vec vector space "
+            f"for {label.lower()} vocabulary in Cisco's annual filings."
+        )
+    cluster_interp = "\n\n".join(interp_lines)
+
     from src import report_builder
-    report_builder.save_section("04_part2_q4_clustering.md", """# Part 2, Q4: Thematic Clustering of Word Vectors
+    report_builder.save_section("04_part2_q4_clustering.md", f"""# Question 4: Thematic Clustering of Word Vectors
 
-## K-Means WCSS
-[TABLE](output/tables/q4_wcss.csv)
+## Clustering Summary (WCSS)
+[TABLE](output/tables/q4_cluster_summary.csv)
 
-## Cluster Words (Top 10 per Cluster)
-[TABLE](output/tables/q4_cluster_words.csv)
+## Representative Words per Cluster (Top 10)
+[TABLE](output/tables/q4_representative_words.csv)
 
 ## PCA 2D Scatter Plot
-![PCA Word Vector Clusters](output/plots/q4_pca_clusters.png)
+![Figure 2: Word Vector Clusters - k=5 (PCA projection)](output/plots/q4_pca_clusters.png)
 
 ## Interpretation
-Do the five clusters align with standard financial ratio categories (liquidity,
-profitability, solvency, efficiency, market performance)? If any cluster does not map
-cleanly onto a financial dimension, discuss what its vocabulary reveals about Cisco's
-strategic communication priorities.
 
-[YOUR WRITTEN INTERPRETATION HERE]
+K-means clustering with k=5 applied to the normalised word-vector matrix of the top 300
+corpus-frequency words produced a Within-Cluster Sum of Squares (WCSS) of {wcss:.4f}.
+WCSS measures the total intra-cluster variance; a lower value indicates that the cluster
+members are more tightly concentrated around their respective centroids, while a higher
+value suggests that the vocabulary grouped within each cluster is semantically more
+dispersed.
+
+{cluster_interp}
+
+The five clusters only partially align with the standard financial analysis categories
+of liquidity, profitability, solvency, efficiency, and market performance. Most notably,
+the 'Strategic & Operational Context' cluster does not map cleanly onto any single
+standard financial ratio category; its representative words — including summarized,
+compared, unit, gain, collaboration, guarantee, secure, internet, and federal — span
+multiple domains covering operational metrics, strategic initiatives, and regulatory
+language, indicating that this cluster captures a residual grouping of contextually
+similar but thematically mixed vocabulary. The remaining four clusters show clearer
+thematic coherence within their respective financial domains. The PCA projection
+visualises this partial overlap, with clusters showing varying degrees of separation
+along the first two principal components, which together capture a limited share of
+total vector-space variance due to the high-dimensional and semantically dense nature
+of financial disclosure language.
 """)
     report_builder.rebuild()
 
