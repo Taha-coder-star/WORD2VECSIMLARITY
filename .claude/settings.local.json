@@ -11,7 +11,8 @@
       "PowerShell(winget install *)",
       "PowerShell(py *)",
       "Bash(Get-ChildItem *)",
-      "Bash(py -3.12 main.py --question 4)"
+      "Bash(py -3.12 main.py --question 4)",
+      "Bash(py -3.12 main.py --question 6)"
     ]
   }
 }

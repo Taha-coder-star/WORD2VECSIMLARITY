@@ -16,7 +16,7 @@ Liquidity: cash | Profitability: earnings | Debt: debt | Revenue: revenue | Risk
 
 ## Interpretation
 
-**Liquidity (seed: cash)**
+### Liquidity (seed: cash)
 The semantic neighbourhood of 'cash' is partially meaningful. The two
 highest-ranked neighbours — flow and liquidity — are directly relevant to short-term
 liquidity management and confirm that this seed occupies a cash-focused region of the
@@ -27,7 +27,7 @@ as consider, exiting, realignment, and recruit reflect co-occurrence with restru
 and organisational disclosure language rather than liquidity-specific vocabulary,
 introducing some noise into the neighbourhood profile.
 
-**Profitability (seed: earnings)**
+### Profitability (seed: earnings)
 The seed 'earnings' was selected over 'profit' because 'profit' returned
 semantically unrelated neighbours with cosine similarities below 0.35, indicating that
 'profit' is too infrequent in Cisco's formal SEC filing language to have developed
@@ -40,7 +40,7 @@ reviews. Some noise is present in neighbours such as earlier, targeted, and sele
 which reflect co-occurrence in forward-looking or comparative sentences rather than
 purely profitability contexts.
 
-**Debt (seed: debt)**
+### Debt (seed: debt)
 The semantic neighbourhood of 'debt' is the most coherent and financially
 grounded across all five dimensions. Neighbours including incurrence, leverage,
 indebtedness, issuance, pay, incur, and assume are all directly tied to debt
@@ -50,7 +50,7 @@ terms, maturity schedules, and interest obligations are consistently discussed t
 across the five annual filings. The absence of noise terms confirms that 'debt' is used
 in a well-defined and consistent vocabulary context throughout the corpus.
 
-**Revenue (seed: revenue)**
+### Revenue (seed: revenue)
 The neighbourhood of 'revenue' is one of the strongest in the analysis, with
 neighbours deferral, recognition, variability, predictability, shortfall, sustainable,
 and volume all directly mapping to Cisco's revenue reporting framework. These terms
@@ -60,7 +60,7 @@ forward-looking commentary on revenue sustainability and growth. The coherence o
 neighbourhood confirms that revenue is a well-defined and consistently discussed concept
 across all five Cisco 10-K filings.
 
-**Risk (seed: uncertain)**
+### Risk (seed: uncertain)
 The seed 'uncertain' was selected over 'risk' because 'risk' returned neighbours
 consisting almost entirely of cross-reference boilerplate — terms such as fully,
 discussed, forth, contained, and elsewhere — which are phrases used in the structured

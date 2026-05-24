@@ -1,0 +1,116 @@
+Community,Label,Rank,Word,Degree
+0,ESG & Environmental Disclosures,1,emission,4
+0,ESG & Environmental Disclosures,2,greenhouse,2
+0,ESG & Environmental Disclosures,3,gas,2
+0,ESG & Environmental Disclosures,4,absolute,1
+0,ESG & Environmental Disclosures,5,ghg,1
+1,Legal & Intellectual Property,1,patent,94
+1,Legal & Intellectual Property,2,claim,68
+1,Legal & Intellectual Property,3,state,44
+1,Legal & Intellectual Property,4,united,44
+1,Legal & Intellectual Property,5,court,42
+1,Legal & Intellectual Property,6,infringement,41
+1,Legal & Intellectual Property,7,right,37
+1,Legal & Intellectual Property,8,litigation,35
+1,Legal & Intellectual Property,9,asserted,35
+1,Legal & Intellectual Property,10,california,34
+2,Corporate Governance & Financial Reporting,1,financial,198
+2,Corporate Governance & Financial Reporting,2,cisco,154
+2,Corporate Governance & Financial Reporting,3,security,144
+2,Corporate Governance & Financial Reporting,4,management,109
+2,Corporate Governance & Financial Reporting,5,inc,102
+2,Corporate Governance & Financial Reporting,6,consolidated,100
+2,Corporate Governance & Financial Reporting,7,director,93
+2,Corporate Governance & Financial Reporting,8,control,92
+2,Corporate Governance & Financial Reporting,9,officer,86
+2,Corporate Governance & Financial Reporting,10,accounting,86
+3,Equity Compensation & Capital Returns,1,employee,106
+3,Equity Compensation & Capital Returns,2,stock,97
+3,Equity Compensation & Capital Returns,3,share,92
+3,Equity Compensation & Capital Returns,4,plan,90
+3,Equity Compensation & Capital Returns,5,based,76
+3,Equity Compensation & Capital Returns,6,cash,54
+3,Equity Compensation & Capital Returns,7,common,52
+3,Equity Compensation & Capital Returns,8,date,49
+3,Equity Compensation & Capital Returns,9,program,49
+3,Equity Compensation & Capital Returns,10,dividend,41
+4,Contracts & Financing Arrangements,1,term,89
+4,Contracts & Financing Arrangements,2,arrangement,72
+4,Contracts & Financing Arrangements,3,financing,63
+4,Contracts & Financing Arrangements,4,software,60
+4,Contracts & Financing Arrangements,5,lease,54
+4,Contracts & Financing Arrangements,6,payment,51
+4,Contracts & Financing Arrangements,7,receivables,48
+4,Contracts & Financing Arrangements,8,upon,48
+4,Contracts & Financing Arrangements,9,obligation,47
+4,Contracts & Financing Arrangements,10,party,46
+5,Revenue & Geographic Segments,1,revenue,59
+5,Revenue & Geographic Segments,2,segment,42
+5,Revenue & Geographic Segments,3,percentage,39
+5,Revenue & Geographic Segments,4,margin,35
+5,Revenue & Geographic Segments,5,increased,35
+5,Revenue & Geographic Segments,6,gross,34
+5,Revenue & Geographic Segments,7,increase,28
+5,Revenue & Geographic Segments,8,america,28
+5,Revenue & Geographic Segments,9,emea,27
+5,Revenue & Geographic Segments,10,primarily,25
+6,Asset Valuation & Tax,1,asset,191
+6,Asset Valuation & Tax,2,value,173
+6,Asset Valuation & Tax,3,tax,159
+6,Asset Valuation & Tax,4,income,154
+6,Asset Valuation & Tax,5,fair,143
+6,Asset Valuation & Tax,6,net,139
+6,Asset Valuation & Tax,7,change,139
+6,Asset Valuation & Tax,8,loss,135
+6,Asset Valuation & Tax,9,rate,133
+6,Asset Valuation & Tax,10,cost,129
+7,"Products, Services & Market",1,product,333
+7,"Products, Services & Market",2,customer,292
+7,"Products, Services & Market",3,service,240
+7,"Products, Services & Market",4,technology,208
+7,"Products, Services & Market",5,market,198
+7,"Products, Services & Market",6,network,162
+7,"Products, Services & Market",7,new,139
+7,"Products, Services & Market",8,offering,122
+7,"Products, Services & Market",9,company,107
+7,"Products, Services & Market",10,networking,106
+8,Supply Chain & Procurement,1,component,66
+8,Supply Chain & Procurement,2,supply,59
+8,Supply Chain & Procurement,3,contract,55
+8,Supply Chain & Procurement,4,supplier,52
+8,Supply Chain & Procurement,5,purchase,50
+8,Supply Chain & Procurement,6,commitment,50
+8,Supply Chain & Procurement,7,manufacturing,48
+8,Supply Chain & Procurement,8,inventory,48
+8,Supply Chain & Procurement,9,manufacturer,44
+8,Supply Chain & Procurement,10,order,42
+9,XBRL Filing Metadata,1,inline,16
+9,XBRL Filing Metadata,2,extension,16
+9,XBRL Filing Metadata,3,document,16
+9,XBRL Filing Metadata,4,xbrl,15
+9,XBRL Filing Metadata,5,taxonomy,15
+9,XBRL Filing Metadata,6,linkbase,13
+9,XBRL Filing Metadata,7,calculation,8
+9,XBRL Filing Metadata,8,lab,8
+9,XBRL Filing Metadata,9,label,8
+9,XBRL Filing Metadata,10,definition,8
+10,Risk Factors & Business Conditions,1,business,84
+10,Risk Factors & Business Conditions,2,condition,58
+10,Risk Factors & Business Conditions,3,operating,56
+10,Risk Factors & Business Conditions,4,future,56
+10,Risk Factors & Business Conditions,5,risk,53
+10,Risk Factors & Business Conditions,6,economic,45
+10,Risk Factors & Business Conditions,7,factor,43
+10,Risk Factors & Business Conditions,8,impact,43
+10,Risk Factors & Business Conditions,9,harm,39
+10,Risk Factors & Business Conditions,10,materially,37
+11,Workforce Diversity & Culture,1,diversity,11
+11,Workforce Diversity & Culture,2,gender,9
+11,Workforce Diversity & Culture,3,culture,9
+11,Workforce Diversity & Culture,4,race,9
+11,Workforce Diversity & Culture,5,orientation,8
+11,Workforce Diversity & Culture,6,collection,7
+11,Workforce Diversity & Culture,7,conscious,7
+11,Workforce Diversity & Culture,8,ethnicity,7
+11,Workforce Diversity & Culture,9,processing,6
+11,Workforce Diversity & Culture,10,border,6

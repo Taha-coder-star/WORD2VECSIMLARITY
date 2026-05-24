@@ -45,6 +45,19 @@ def build_cooccurrence(token_lists: list[list[str]],
     return {pair: cnt for pair, cnt in cooc.items() if cnt >= min_count}
 
 
+def build_graph() -> nx.Graph:
+    """Build and return the co-occurrence graph without statistics or plotting."""
+    raw_docs    = load_10k_files(DATA_DIR)
+    token_lists = [preprocess(text) for text in raw_docs.values()]
+    cooc        = build_cooccurrence(token_lists, window=WINDOW, min_count=MIN_COOC)
+    G = nx.Graph()
+    for (w1, w2), weight in cooc.items():
+        G.add_edge(w1, w2, weight=weight)
+    G.remove_edges_from(nx.selfloop_edges(G))
+    G.remove_nodes_from(list(nx.isolates(G)))
+    return G
+
+
 def run():
     # ── Load & preprocess corpus ──────────────────────────────────────────────
     raw_docs    = load_10k_files(DATA_DIR)

@@ -6,13 +6,14 @@
 ## Network Visualisation (Top 80 Nodes by Degree)
 ![Figure 3: 10-K Co-occurrence Network – Top 80 Nodes by Degree](output/plots/q5_network_top80.png)
 
+All 80 nodes are plotted. Node labels are shown for the top 25 highest-degree terms only to maintain readability. Node size and colour intensity represent degree centrality; edge width represents co-occurrence weight.
+
 ## Interpretation
 
 The co-occurrence network was constructed from Cisco's five-year 10-K corpus using a
 sliding window of 5 tokens and a minimum co-occurrence threshold of 10,
 yielding a graph of 2858 nodes and 56753 edges. Self-loops and isolated nodes
-were removed before calculating network statistics. The full graph forms a single
-connected component (2858 nodes), so average path length is computed across all nodes.
+were removed before calculating network statistics. The full graph forms a single connected component (2858 nodes), so average path length is computed across all nodes.
 
 Nodes (2858): The 2858 nodes represent the set of lemmatised vocabulary
 terms that meet the minimum co-occurrence threshold with at least one other term; this

@@ -25,6 +25,7 @@ Section file markdown syntax:
 import os
 import re
 import csv
+import shutil
 from datetime import date
 
 from reportlab.platypus import (
@@ -63,6 +64,17 @@ DATA_DESCRIPTION = (
     "of semantic patterns in management disclosures. All subsequent analyses, including "
     "Word2Vec modelling, thematic clustering, and co-occurrence network construction, are "
     "performed on this corpus."
+    "\n\n"
+    "All analyses are implemented in Python 3.12. The following libraries are used as "
+    "equivalents to the R packages described in course materials: gensim (Word2Vec model "
+    "training and nearest-neighbour retrieval, equivalent to word2vec/text2vec), "
+    "scikit-learn (k-means clustering and PCA dimensionality reduction, equivalent to "
+    "stats::kmeans and FactoMineR), NetworkX (co-occurrence graph construction, "
+    "centrality measures, and connected component analysis, equivalent to igraph), "
+    "python-louvain (Louvain community detection with modularity maximisation, equivalent "
+    "to igraph::cluster_louvain), nltk (lemmatisation using WordNetLemmatizer, equivalent "
+    "to textstem), and reportlab (PDF report generation). All random seeds are fixed at "
+    "42 for reproducibility."
 )
 
 PART_PLACEHOLDERS = {
@@ -77,21 +89,49 @@ PART_PLACEHOLDERS = {
 }
 
 CONCLUSION = (
-    "Questions 1 through 5 of this assignment have been completed. The corpus construction "
-    "and preprocessing pipeline (Q1) produced a cleaned vocabulary of 3,682 lemmatised "
-    "terms from Cisco Systems, Inc.'s five annual 10-K filings spanning fiscal years 2021 "
-    "to 2025. A Word2Vec skip-gram model (Q2) was trained on this corpus, yielding a "
-    "2,799-word vocabulary with 100-dimensional embeddings. Semantic proximity analysis "
-    "(Q3) identified nearest-neighbour terms for five financial dimensions — liquidity, "
-    "profitability, debt, revenue, and risk — using seed terms selected for coherent "
-    "financial neighbourhood structure. Thematic clustering (Q4) applied k-means to the "
-    "top 300 frequency words, producing five clusters labelled according to their "
-    "representative vocabulary. Co-occurrence network construction (Q5) built an undirected "
-    "weighted graph of 2,858 nodes and 56,753 edges from the full corpus, with network "
-    "statistics confirming a sparse, small-world structure with moderate clustering."
+    "All six questions of this assignment have been completed for Cisco Systems, Inc.'s "
+    "five-year 10-K corpus spanning fiscal years 2021 to 2025. The corpus construction "
+    "and preprocessing pipeline (Q1) reduced the raw vocabulary from 9,457 to 3,682 "
+    "lemmatised terms. A Word2Vec skip-gram model (Q2) was trained on this corpus, "
+    "yielding a 2,799-word vocabulary with 100-dimensional embeddings. Semantic proximity "
+    "analysis (Q3) retrieved nearest-neighbour terms for five financial dimensions using "
+    "seed terms selected for meaningful financial neighbourhood structure. Thematic "
+    "clustering (Q4) applied k-means to the top 300 corpus-frequency words, producing "
+    "five clusters reflecting derivatives, governance, accounting, revenue, and strategic "
+    "vocabulary. Co-occurrence network construction (Q5) built an undirected weighted "
+    "graph of 2,858 nodes and 56,753 edges, confirming a sparse, small-world structure "
+    "with a global clustering coefficient of 0.185."
     "\n\n"
-    "Question 6, covering centrality analysis and community detection on the co-occurrence "
-    "network, remains to be completed and will be added to Part 3 of this report."
+    "Centrality analysis and Louvain community detection (Q6) identified the top "
+    "betweenness-central bridge terms in the co-occurrence network and detected 12 "
+    "thematically coherent communities with a modularity score of 0.31. The community "
+    "structure reflects Cisco's distinct financial disclosure domains including revenue "
+    "reporting, legal obligations, asset valuation, governance, and risk factors. Taken "
+    "together, the six analyses confirm that Cisco's 10-K filing language has coherent "
+    "semantic and structural organisation at multiple levels of analysis, consistent with "
+    "the structured and legally mandated nature of SEC annual report disclosures."
+    "\n\n"
+    "Based solely on the textual patterns identified across Q1 to Q6, the following "
+    "near-term financial performance observations can be drawn for Cisco Systems. The "
+    "Revenue and Geographic Segments community (Q6) and the strong semantic coherence "
+    "of the 'revenue' neighbourhood (Q3) — featuring terms such as deferral, recognition, "
+    "predictability, and sustainable — indicate that Cisco's management language "
+    "consistently emphasises a stable, subscription-based recurring revenue model, "
+    "suggesting continued near-term revenue predictability from its software and "
+    "services portfolio. The dominance of 'product' as the highest-betweenness node "
+    "(Q6) alongside Supply Chain and Procurement as a distinct community signals "
+    "ongoing product hardware exposure, with component sourcing risk remaining a "
+    "material disclosure theme. The Legal and Intellectual Property community's large "
+    "size reflects continued legal burden from patent litigation and compliance "
+    "obligations, which could exert cost pressure on operating margins. The 'uncertain' "
+    "neighbourhood (Q3) — clustering geopolitical, deteriorate, challenging, and "
+    "instability — alongside the Risk Factors and Business Conditions community (Q6) "
+    "confirms that macroeconomic and geopolitical uncertainty are persistently "
+    "highlighted downside risks. The presence of a large Products, Services and Market "
+    "community centred on 'security' co-occurrences within the governance cluster "
+    "points to cybersecurity as a growth-driving theme in Cisco's strategic narrative. "
+    "These observations are derived from textual frequency and co-occurrence patterns "
+    "only and do not constitute investment advice or a forward-looking financial forecast."
 )
 
 # Section file prefixes that belong to each part
@@ -201,7 +241,7 @@ def _csv_table(path):
     if not rows:
         return None
 
-    rows = [r[:8] for r in rows[:51]]
+    rows = [r[:8] for r in rows[:125]]
     col_count = max(len(r) for r in rows)
     page_w    = A4[0] - 4 * cm
     col_w     = page_w / col_count
@@ -391,6 +431,10 @@ def rebuild():
         if f.endswith(".md") or f.endswith(".txt")
     )
     print(f"PDF rebuilt -> {OUTPUT_PDF}  ({section_count} section file(s))")
+
+    final_pdf = "output/final_report.pdf"
+    shutil.copy2(OUTPUT_PDF, final_pdf)
+    print(f"Final report copied -> {final_pdf}")
 
 
 def save_section(filename: str, content: str):
